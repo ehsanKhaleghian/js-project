@@ -1,0 +1,80 @@
+var----> For function and global scope;
+          For example: accessibale inside if; 
+
+let and const----> redeclare is forbided;
+                    block scope;
+
+Hoisting----> variable created with "var", it initialied with undefined value; it doesn't work 
+                with let and const;
+
+ # -------------------------- How Code Gets Executed -------------------------- #
+Heap:
+-Long Term Memory: Data store
+
+Stack:
+-Short term memory: Control which function is executing, Manage our program flow;
+
+Example::::
+    function getName(){
+        return prompt("Your name:","")
+    }
+
+    function greet(){
+        const userName=getName();
+        console.log("Hello"+userName)
+    }
+
+    greet()
+    --------------------------------
+    -Functions stored in the Heap;
+    -On executing code browser engin push data into slack;
+    -anonymous function execute(Hole of the code), It happens only after evaluating code by JS;
+    -JS moves greet() to stack;
+    -استک یه دیتا استراکچر هستش که فانکشن زمانی که نیاز به اجرا داشته باشه جاوا اسکریپت 
+    اون رو وارد استک میکنه و هر وقت کارش تمام شد از اون خارجش میکنه
+    -بالاترین مورد در استک اونی هستش که در حال اتفاق افتادن هست
+    -ارتباط بین فانکشن ها هم داخل استک بر اساس ترتیب اونها مشخص میشه
+     
+     * Inside Stack for this example:
+
+        prompt()
+        getName()
+        greet()
+        (anonymous)
+    ------------------
+        stack
+
+    -when prompt() is done it removes from stack and another one on the row will pop up form stack.
+
+    stack looks like:
+
+    prompt()
+    getName()           getName()                      
+    greet()             greet()             greet()
+    (anonymous) ----->  (anonymous) ----->  (anonymous) ----->  (anonymous) ----->  
+
+    in JS : One thing at a time, just one execution happen at a time and stack controls which 
+        thing is happening.
+--------------------------------
+-داخل بروزر ایونت لوپ هست برای کنترل ایسینکرونوس فانکشن ها ، چون این فانکشن ها داخل استک
+    نمیرن. مثل کلیک لیستنر ها در واقع یک جورایی بروزر این نوع ایونت ها رو منیج میکنه
+
+1) The JavaScript Language
+Understands core syntax (let, const etc) but does NOT know anything about the DOM for example
+
+2) Browser APIs
+Not responsible for understanding your code (that's what 1) does) but instead 
+    responsible for exposing APIs like the DOM API which you can use from inside your script code.
+
+# ---------------------------------------------------------------------------- #
+Primitive Values: String, Numbers, Booleans, Null, undefined, Symbols 
+
+
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+# --------------------------------- FUNCTIONS -------------------------------- #
+
+    
+     
+
+              
