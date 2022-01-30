@@ -17,7 +17,7 @@ const resultHandler = () => {
 // ids.add("d");
 // console.log("IDS:::", ids);
 //
-// for (const entery of ids.entries()){
+// for (const entry of ids.entries()){
 //     console.log("ENTERIESSSSS", entery)
 // }
 // console.log("ENTERIES:::::", ids.entries());
